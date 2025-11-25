@@ -4,6 +4,11 @@ Este proyecto implementa un simulador visual de una Máquina de Turing usando **
 
 ---
 
+## Integrantes:
+Alejandro Oquendo, Victor Manuel Largo, Andrea Trujillo
+
+---
+
 ## 1. Regex elegido y justificación
 
 El patrón seleccionado para validar un PIN es: \d{4} | \d{6}
