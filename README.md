@@ -5,7 +5,7 @@ Este proyecto implementa un simulador visual de una Máquina de Turing usando **
 ---
 
 ## Integrantes:
-Alejandro Oquendo, Victor Manuel Largo, Andrea Trujillo
+Alejandro Oquendo, Victor Manuel Largo, Andrea Valentina Trujillo Lopez
 
 ---
 
