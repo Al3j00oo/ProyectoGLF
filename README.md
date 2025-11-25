@@ -81,14 +81,8 @@ Esto permite replicar perfectamente el comportamiento del regex original.
 | `qR` | cualquier | mismo | R | `qR` | Rechazo |
 
 ---
-# Expresión Regular para Código PIN
 
-## La Expresión
-```regex
-\d{4}|\d{6}
-```
-
-## ¿Por qué es Regular?
+## 4. ¿Por qué es Regular?
 
 Esta expresión es **regular** porque cumple con las características de los lenguajes regulares:
 
