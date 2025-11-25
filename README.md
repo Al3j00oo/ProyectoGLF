@@ -81,19 +81,3 @@ Esto permite replicar perfectamente el comportamiento del regex original.
 | `qR` | cualquier | mismo | R | `qR` | Rechazo |
 
 ---
-
-## Conclusiones
-
-El proyecto demuestra la equivalencia entre expresiones regulares, AFDs y Máquinas de Turing, integrando:
-
-- diseño formal de autómatas  
-- simulación gráfica en JavaScript  
-- manejo de cadenas por medio de lógica determinista  
-
-La implementación permite visualizar paso a paso cómo la MT analiza y determina si un PIN es válido.
-
----
-
-
-
-
