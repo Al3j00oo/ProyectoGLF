@@ -5,7 +5,7 @@ Este proyecto implementa un simulador visual de una Máquina de Turing usando **
 ---
 
 ## Integrantes:
-Alejandro Oquendo, Victor Manuel Largo, Andrea Trujillo
+Alejandro Oquendo, Victor Manuel Largo, Andrea Valentina Trujillo Lopez
 
 ---
 
@@ -81,3 +81,52 @@ Esto permite replicar perfectamente el comportamiento del regex original.
 | `qR` | cualquier | mismo | R | `qR` | Rechazo |
 
 ---
+
+## 4. ¿Por qué es Regular?
+
+Esta expresión es **regular** porque cumple con las características de los lenguajes regulares:
+
+1. **Operaciones básicas permitidas:**
+   - **Concatenación**: `\d{4}` concatena exactamente 4 dígitos
+   - **Unión (alternancia)**: El operador `|` une dos patrones alternativos
+   - **Repetición**: `{4}` y `{6}` son formas específicas de repetición (equivalente a `\d\d\d\d`)
+
+2. **No requiere memoria de pila**: Un autómata finito puede reconocerla sin necesidad de recordar estados anteriores o contar de forma compleja. Solo necesita contar hasta 4 o hasta 6 dígitos.
+
+3. **Se puede representar con un autómata finito**: Puede construirse una máquina de estados finitos que acepte exactamente este patrón.
+
+## Componentes de la Expresión
+
+| Componente | Significado |
+|------------|-------------|
+| `\d` | Cualquier dígito (0-9) |
+| `{4}` | Exactamente 4 repeticiones |
+| `{6}` | Exactamente 6 repeticiones |
+| `\|` | Operador OR (alternancia) |
+
+## Ejemplos de Cadenas
+
+### ✅ Cadenas que **SÍ** acepta:
+
+| Cadena | Descripción |
+|--------|-------------|
+| `1234` | PIN de 4 dígitos |
+| `0000` | PIN de 4 dígitos (todos ceros) |
+| `9876` | PIN de 4 dígitos |
+| `123456` | PIN de 6 dígitos |
+| `000000` | PIN de 6 dígitos (todos ceros) |
+| `987654` | PIN de 6 dígitos |
+
+### ❌ Cadenas que **NO** acepta:
+
+| Cadena | Razón del rechazo |
+|--------|-------------------|
+| `123` | Solo 3 dígitos (muy corto) |
+| `12345` | 5 dígitos (no cumple con 4 ni con 6) |
+| `1234567` | 7 dígitos (muy largo) |
+| `12a4` | Contiene letra 'a' |
+| `12 34` | Contiene espacio |
+| `1234-56` | Contiene guión |
+| `` | Cadena vacía |
+| `abcd` | Solo letras, sin dígitos |
+
